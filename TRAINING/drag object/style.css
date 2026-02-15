@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* ===== PUZZLE SLOT ===== */
+#puzzle {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 5px;
+}
+
+.slot {
+  width: 150px;
+  height: 150px;
+  background: #ddd;
+  border: 2px dashed #999;
+}
+
+/* ===== POTONGAN GAMBAR ===== */
+#pieces {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 10px;
+}
+
+.piece {
+  width: 150px;
+  height: 150px;
+  background-image: url("image.png");
+  background-size: 300px 300px;
+  cursor: grab;
+}
+
+/* posisi potongan */
+.piece[data-pos="1"] { background-position: 0 0; }
+.piece[data-pos="2"] { background-position: -150px 0; }
+.piece[data-pos="3"] { background-position: 0 -150px; }
+.piece[data-pos="4"] { background-position: -150px -150px; }

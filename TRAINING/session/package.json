@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "init": "^0.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "npm": "^11.7.0"
+  }
+}
