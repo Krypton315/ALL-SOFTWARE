@@ -6,10 +6,10 @@
 const express = require('express');
 const router = express.Router();
 
-const authRoutes = require('./auth.routes');
-const userRoutes = require('./user.routes');
-const adminRoutes = require('./admin.routes');
-const publicRoutes = require('./public.routes');
+const authRoutes = require('../../modules/auth/auth.routes');
+const userRoutes = require('./../modules/users/user.routes');
+const adminRoutes = require('../../modules/admin/admin.routes');
+const publicRoutes = require('../../modules/public/public.routes');
 
 // Mount routes
 router.use('/v1/auth', authRoutes);

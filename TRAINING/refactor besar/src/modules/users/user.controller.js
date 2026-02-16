@@ -3,10 +3,10 @@
 // Handle HTTP requests untuk user
 // ====================================
 
-const UserService = require('../services/user.service');
-const CacheService = require('../services/cache.service');
-const ApiResponse = require('../utils/response');
-const Logger = require('../utils/logger');
+const UserService = require('./user.service');
+const CacheService = require('../../infrastructure/cache/cache.service');
+const ApiResponse = require('../../infrastructure/utils/response');
+const Logger = require('../../infrastructure/utils/logger');
 
 class UserController {
   /**

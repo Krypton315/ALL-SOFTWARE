@@ -5,8 +5,8 @@
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const db = require('../config/database');
-const Logger = require('../utils/logger');
+const db = require('../../infrastructure/config/database');
+const Logger = require('../../infrastructure/utils/logger');
 
 class AuthService {
   /**

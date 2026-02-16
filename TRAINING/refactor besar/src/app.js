@@ -6,10 +6,10 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-const routes = require('./routes');
-const rateLimiter = require('./middleware/rateLimiter.middleware');
-const Logger = require('./utils/logger');
-const ApiResponse = require('./utils/response');
+const routes = require('./infrastructure/routes/index');
+const rateLimiter = require('./infrastructure/middleware/rateLimiter.middleware');
+const Logger = require('./infrastructure/utils/logger');
+const ApiResponse = require('./infrastructure/utils/response');
 
 const app = express();
 

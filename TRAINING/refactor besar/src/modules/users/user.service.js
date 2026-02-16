@@ -3,8 +3,9 @@
 // Business logic untuk user operations
 // ====================================
 
-const db = require('../config/database');
-const Logger = require('../utils/logger');
+const db = require('../../infrastructure/config/database');
+const Logger = require('../../infrastructure/utils/logger');
+const userRepository = require('./user.repository')
 
 class UserService {
   /**
@@ -12,20 +13,13 @@ class UserService {
    */
   static async getUserById(userId) {
     try {
-      const result = await db.query(
-        `SELECT u.id, u.username, u.email, u.is_active, 
-                u.created_at, r.name as role
-         FROM users u
-         JOIN roles r ON u.role_id = r.id
-         WHERE u.id = $1`,
-        [userId]
-      );
+      const user = await userRepository.findById(userId);
 
-      if (result.rows.length === 0) {
+      if (!user) {
         throw new Error('User not found');
       }
 
-      return result.rows[0];
+      return user;
     } catch (error) {
       Logger.error('Get user by ID error', error);
       throw error;

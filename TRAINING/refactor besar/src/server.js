@@ -2,9 +2,9 @@
 // SERVER ENTRY POINT
 // ====================================
 
-const app = require('./app');
-const { pool } = require('./config/database');
-const Logger = require('./utils/logger');
+const app = require('./infrastructure/app');
+const { pool } = require('./infrastructure/config/database');
+const Logger = require('./infrastructure/utils/logger');
 
 const PORT = process.env.PORT || 3000;
 

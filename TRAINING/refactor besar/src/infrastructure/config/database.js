@@ -4,7 +4,7 @@
 // ====================================
 
 const { Pool } = require('pg');
-require('dotenv').config();
+require('dotenv').config({path: '../../.env'});
 
 // Konfigurasi connection pool
 const pool = new Pool({

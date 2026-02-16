@@ -3,9 +3,9 @@
 // Handle HTTP requests untuk auth
 // ====================================
 
-const AuthService = require('../services/auth.service');
-const ApiResponse = require('../utils/response');
-const Logger = require('../utils/logger');
+const AuthService = require('./auth.service');
+const ApiResponse = require('../../infrastructure/utils/response');
+const Logger = require('../../infrastructure/utils/logger');
 
 class AuthController {
   /**

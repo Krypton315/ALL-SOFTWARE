@@ -3,8 +3,8 @@
 // Handle HTTP requests untuk public
 // ====================================
 
-const ApiResponse = require('../utils/response');
-const Logger = require('../utils/logger');
+const ApiResponse = require('../../infrastructure/utils/response');
+const Logger = require('../../infrastructure/utils/logger');
 
 class PublicController {
   /**

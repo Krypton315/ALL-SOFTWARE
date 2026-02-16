@@ -1,0 +1,24 @@
+{
+  "name": "valentine-game-acha",
+  "version": "1.0.0",
+  "description": "Game Valentine Special untuk AchaImup - Dibuat oleh Bintang skibidi",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l 3000"
+  },
+  "keywords": [
+    "valentine",
+    "game",
+    "html",
+    "interactive",
+    "romantic"
+  ],
+  "author": "Bintang skibidi",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

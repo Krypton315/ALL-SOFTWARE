@@ -3,9 +3,9 @@
 // Handle HTTP requests untuk admin
 // ====================================
 
-const UserService = require('../services/user.service');
-const ApiResponse = require('../utils/response');
-const Logger = require('../utils/logger');
+const UserService = require('../users/user.service');
+const ApiResponse = require('../../infrastructure/utils/response');
+const Logger = require('../../infrastructure/utils/logger');
 
 class AdminController {
   /**

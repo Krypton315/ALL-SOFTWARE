@@ -4,9 +4,9 @@
 
 const express = require('express');
 const router = express.Router();
-const AdminController = require('../controllers/admin.controller');
-const verifyToken = require('../middleware/auth.middleware');
-const checkRole = require('../middleware/role.middleware');
+const AdminController = require('./admin.controller');
+const verifyToken = require('../auth/auth.middleware');
+const checkRole = require('../../infrastructure/middleware/role.middleware');
 
 // Semua route admin memerlukan authentication dan role admin
 router.use(verifyToken);

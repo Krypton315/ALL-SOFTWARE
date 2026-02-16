@@ -4,9 +4,9 @@
 
 const express = require('express');
 const router = express.Router();
-const AuthController = require('../controllers/auth.controller');
-const validate = require('../middleware/validation.middleware');
-const { registerSchema, loginSchema } = require('../validations/auth.validation');
+const AuthController = require('./auth.controller');
+const validate = require('../../infrastructure/middleware/validation.middleware');
+const { registerSchema, loginSchema } = require('./auth.validation');
 
 // POST /auth/register - Register user baru
 router.post('/register', validate(registerSchema), AuthController.register);
