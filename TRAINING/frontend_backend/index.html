@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth — Masuk & Daftar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <main class="auth-wrapper">
+
+    <div class="brand">
+      <div class="brand-mark">◈</div>
+      <span class="brand-name">Softara</span>
+    </div>
+
+    <div class="card">
+
+      <!-- Tab switcher -->
+      <div class="tab-bar" role="tablist" aria-label="Mode Autentikasi">
+        <button class="tab active" role="tab" aria-selected="true"  aria-controls="panel-login"    id="tab-login"    data-target="login">Masuk</button>
+        <button class="tab"        role="tab" aria-selected="false" aria-controls="panel-register" id="tab-register" data-target="register">Daftar</button>
+        <div class="tab-indicator" aria-hidden="true"></div>
+      </div>
+
+      <!-- Global message banner -->
+      <div class="banner hidden" id="banner" role="alert" aria-live="polite"></div>
+
+      <!-- ── LOGIN PANEL ── -->
+      <section class="panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <h1 class="panel-title">Selamat datang<br/><em>kembali.</em></h1>
+        <form id="form-login" novalidate>
+
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" placeholder="kamu@email.com" autocomplete="email" />
+            <span class="field-error" id="login-email-err" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Kata Sandi</label>
+            <div class="input-wrap">
+              <input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" />
+              <button type="button" class="toggle-pw" aria-label="Tampilkan kata sandi" data-target="login-password">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="field-error" id="login-password-err" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-login">
+            <span class="btn-label">Masuk</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+      </section>
+
+      <!-- ── REGISTER PANEL ── -->
+      <section class="panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register">
+        <h1 class="panel-title">Buat akun<br/><em>baru.</em></h1>
+        <form id="form-register" novalidate>
+
+          <div class="field">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" name="username" placeholder="nama_pengguna" autocomplete="username" />
+            <span class="field-error" id="reg-username-err" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" name="email" placeholder="kamu@email.com" autocomplete="email" />
+            <span class="field-error" id="reg-email-err" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="reg-password">Kata Sandi</label>
+            <div class="input-wrap">
+              <input type="password" id="reg-password" name="password" placeholder="Min. 6 karakter" autocomplete="new-password" />
+              <button type="button" class="toggle-pw" aria-label="Tampilkan kata sandi" data-target="reg-password">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="field-error" id="reg-password-err" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="reg-confirm">Konfirmasi Kata Sandi</label>
+            <div class="input-wrap">
+              <input type="password" id="reg-confirm" name="confirm" placeholder="Ulangi kata sandi" autocomplete="new-password" />
+              <button type="button" class="toggle-pw" aria-label="Tampilkan konfirmasi" data-target="reg-confirm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <span class="field-error" id="reg-confirm-err" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-register">
+            <span class="btn-label">Buat Akun</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+      </section>
+
+    </div><!-- /card -->
+
+    <p class="footer-note">© 2025 Softara. Semua hak dilindungi.</p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
